@@ -153,9 +153,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 66389316}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 725d0e4f187014461912647d40eb842d, type: 3}
+  m_Script: {fileID: 11500000, guid: 2db5a4e7a1b6048af8d400d97f3408e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotacaoHoraria: 1
 --- !u!212 &66389319
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -242,6 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2db5a4e7a1b6048af8d400d97f3408e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotacaoHoraria: 0
 --- !u!70 &80062959
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -483,6 +485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2db5a4e7a1b6048af8d400d97f3408e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotacaoHoraria: 0
 --- !u!212 &275872286
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -913,6 +916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2db5a4e7a1b6048af8d400d97f3408e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotacaoHoraria: 0
 --- !u!212 &499756817
 SpriteRenderer:
   m_ObjectHideFlags: 0

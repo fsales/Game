@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RotateController : MonoBehaviour {
 
+	public bool rotacaoHoraria;
+
 	// Use this for initialization
 	void Start () {
 
@@ -11,7 +13,12 @@ public class RotateController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		transform.Rotate(0, 0, -5);
+
+		if (rotacaoHoraria) {
+			transform.Rotate (0, 0, 5);
+		} else {
+			transform.Rotate (0, 0, -5);
+		}
 
 //		Vector3 scala = transform.localScale;
 //		scala.x = 1;
