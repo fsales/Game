@@ -1,8 +1,8 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/RotateController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\GameSceneController.cs">
     <Files>
-      <File FileName="Assets/Scripts/RotateController.cs" Line="14" Column="29" />
+      <File FileName="Assets\GameSceneController.cs" Line="22" Column="27" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

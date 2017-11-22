@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour {
 	bool  cair = false;
 
 
-	bool debugStates = false;
+	bool debugStates = true;
 
 
 	// Use this for initialization
@@ -30,33 +30,37 @@ public class PlayerController : MonoBehaviour {
 		}
 
 
-		// Esquerda
-		if (Input.GetKey(KeyCode.LeftArrow)){
-			Vector3 scala = transform.localScale;
-			scala.x = -1;
-			transform.localScale = scala;
+			
+			// Esquerda
+			if (Input.GetKey (KeyCode.LeftArrow)) {
+				Vector3 scala = transform.localScale;
+				scala.x = -1;
+				transform.localScale = scala;
 
-			Vector3 pos = transform.position;
-			pos.x -= escalaRunning;
+				Vector3 pos = transform.position;
+				pos.x -= escalaRunning;
 
-			transform.position = pos;
+				transform.position = pos;
 
-			playerStateRunning ();
-		}
+				playerStateRunning ();
 
-		// Direita
-		if (Input.GetKey(KeyCode.RightArrow)){
-			Vector3 scala = transform.localScale;
-			scala.x = 1;
-			transform.localScale = scala;
+			}
 
-			Vector3 pos = transform.position;
-			pos.x += escalaRunning;
+			// Direita
+			if (Input.GetKey (KeyCode.RightArrow)) {
+				Vector3 scala = transform.localScale;
+				scala.x = 1;
+				transform.localScale = scala;
 
-			transform.position = pos;
+				Vector3 pos = transform.position;
+				pos.x += escalaRunning;
 
-			playerStateRunning ();
-		}
+				transform.position = pos;
+
+				playerStateRunning ();
+
+			}
+		
 
 
 		// Pulando
@@ -66,7 +70,7 @@ public class PlayerController : MonoBehaviour {
 
 				Vector3 pos = transform.position;
 
-				Debug.Log (pos.y);
+				//Debug.Log (pos.y);
 
 				if (pos.y <= maxEscalaJumping) {
 					pos.y += escalaJumping;
@@ -76,11 +80,7 @@ public class PlayerController : MonoBehaviour {
 				} else {
 					cair = true;
 				}
-
-
 			}
-
-
 		}
 
 
@@ -108,18 +108,27 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	bool playerCanJump(){
-		
-
-		bool pode = (transform.position.y < plano);
+		bool andandoOuPulando = anim.GetBool ("stopped") || anim.GetBool ("running");
 
 		// Identificar se esta encima de um objeto
-
-		if (pode) {
+		if (andandoOuPulando) {
 			cair = false;
 		}
 
-		return pode;
 
+		//Debug.Log (cair);
+
+		return andandoOuPulando;
+	}
+
+	bool chegouAoSolo(){
+		if (transform.position.y < plano) {
+			Debug.Log ("Solo");
+		} else {
+			Debug.Log ("Ar");
+		}	
+		
+		return (transform.position.y < plano);
 	}
 
 	bool playerJumping(){
@@ -127,14 +136,19 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void playerStateRunning(){
+		chegouAoSolo ();
 
-		if (!anim.GetBool ("jumping") || playerCanJump()) {
+
+
+		if (chegouAoSolo() || !anim.GetBool ("jumping")) {
 			if(debugStates){
 				Debug.Log ("Correndo...");
 			}
 			anim.SetBool ("stopped", false);
 			anim.SetBool ("running", true);
 			anim.SetBool ("jumping", false);
+
+			cair = false;
 		}
 	}
 
@@ -146,6 +160,7 @@ public class PlayerController : MonoBehaviour {
 		anim.SetBool ("running", false);
 		anim.SetBool ("jumping", false);
 
+		cair = false;
 	}
 		
 
