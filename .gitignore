@@ -1,3 +1,13 @@
 Library/
 Temp/
 UnityPackageManager/
+
+**/*.csproj
+**/*.unityproj
+**/*.sln
+**/*.suo
+**/*.user
+**/*.userprefs
+**/*.pidb
+**/*.booproj
+**/*.asset
