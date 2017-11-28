@@ -10,8 +10,10 @@ public class PlayerController : MonoBehaviour {
 	float plano = -2.5f;
 	float maxEscalaJumping = 2f;
 	bool  cair = false;
+	public CockpitController cockpitController;
 
-	bool debugStates = true;
+	bool debugStates = false;
+	bool pausarStatus = false;
 
 	// Use this for initialization
 	void Start () {
@@ -23,39 +25,47 @@ public class PlayerController : MonoBehaviour {
 
 		//Debug.Log (transform.position.y);
 
+		if (pausarStatus) {
+			return;
+		}
+
 		if (playerCanJump()){
 			playerStateStopped ();
 		}
 
-		// Esquerda
-		if (Input.GetKey (KeyCode.LeftArrow)) {
-			Vector3 scala = transform.localScale;
-			scala.x = -1;
-			transform.localScale = scala;
 
-			Vector3 pos = transform.position;
-			pos.x -= escalaRunning;
+			
+			// Esquerda
+			if (Input.GetKey (KeyCode.LeftArrow)) {
+				Vector3 scala = transform.localScale;
+				scala.x = -1;
+				transform.localScale = scala;
 
-			transform.position = pos;
+				Vector3 pos = transform.position;
+				pos.x -= escalaRunning;
 
-			playerStateRunning ();
+				transform.position = pos;
 
-		}
+				playerStateRunning ();
 
-		// Direita
-		if (Input.GetKey (KeyCode.RightArrow)) {
-			Vector3 scala = transform.localScale;
-			scala.x = 1;
-			transform.localScale = scala;
+			}
 
-			Vector3 pos = transform.position;
-			pos.x += escalaRunning;
+			// Direita
+			if (Input.GetKey (KeyCode.RightArrow)) {
+				Vector3 scala = transform.localScale;
+				scala.x = 1;
+				transform.localScale = scala;
 
-			transform.position = pos;
+				Vector3 pos = transform.position;
+				pos.x += escalaRunning;
 
-			playerStateRunning ();
+				transform.position = pos;
 
-		}
+				playerStateRunning ();
+
+			}
+		
+
 
 		// Pulando
 		if (Input.GetKey(KeyCode.Space)){
@@ -77,6 +87,8 @@ public class PlayerController : MonoBehaviour {
 			}
 		}
 
+
+
 		if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow)){
 			playerStateStopped ();
 		}
@@ -88,6 +100,32 @@ public class PlayerController : MonoBehaviour {
 
 
 	}
+
+
+
+	void OnCollisionEnter2D(Collision2D other){
+
+		//Debug.Log ("Colidiuuuuuuuuu" + other.gameObject.tag);
+
+		if (!CockpitController.FINALIZOU) {
+			if (other.gameObject.tag == "Finish") {
+				cockpitController.registrarFimFase ();
+
+				// Animação FELIZ
+				playerStateHappy();
+				Invoke("trocarFase", 5.0f);
+
+				// AGuardar um tempo determinado e trocar de fase
+
+			}
+		}
+	}
+
+	public void trocarFase(){
+		cockpitController.trocarFase ();
+	}
+
+
 
 	bool playerCanJump(){
 		bool andandoOuPulando = anim.GetBool ("stopped") || anim.GetBool ("running");
@@ -105,9 +143,9 @@ public class PlayerController : MonoBehaviour {
 
 	bool chegouAoSolo(){
 		if (transform.position.y < plano) {
-			Debug.Log ("Solo");
+			//Debug.Log ("Solo");
 		} else {
-			Debug.Log ("Ar");
+			//Debug.Log ("Ar");
 		}	
 		
 		return (transform.position.y < plano);
@@ -120,8 +158,6 @@ public class PlayerController : MonoBehaviour {
 	void playerStateRunning(){
 		chegouAoSolo ();
 
-
-
 		if (chegouAoSolo() || !anim.GetBool ("jumping")) {
 			if(debugStates){
 				Debug.Log ("Correndo...");
@@ -129,6 +165,8 @@ public class PlayerController : MonoBehaviour {
 			anim.SetBool ("stopped", false);
 			anim.SetBool ("running", true);
 			anim.SetBool ("jumping", false);
+			anim.SetBool ("sad", false);
+			anim.SetBool ("happy", false);
 
 			cair = false;
 		}
@@ -141,6 +179,8 @@ public class PlayerController : MonoBehaviour {
 		anim.SetBool ("stopped", true);
 		anim.SetBool ("running", false);
 		anim.SetBool ("jumping", false);
+		anim.SetBool ("sad", false);
+		anim.SetBool ("happy", false);
 
 		cair = false;
 	}
@@ -156,11 +196,29 @@ public class PlayerController : MonoBehaviour {
 			anim.SetBool("stopped", false);
 			anim.SetBool("running", false);
 			anim.SetBool("jumping", true);
+			anim.SetBool ("sad", false);
+			anim.SetBool ("happy", false);
 		}
 	}
 
-	void OnTriggerEnter2D(Collider2D other) {
-		Debug.LogWarning("COLISAO FINAL FASE");
-		anim.SetBool ("happy", true);
+	void playerStateSad(){
+		anim.SetBool("stopped", false);
+		anim.SetBool("running", false);
+		anim.SetBool("jumping", false);
+		anim.SetBool ("sad", true);
+		anim.SetBool ("happy", false);
+
+		pausarStatus = true;
 	}
+
+	void playerStateHappy(){
+		anim.SetBool("stopped", false);
+		anim.SetBool("running", false);
+		anim.SetBool("jumping", false);
+		anim.SetBool ("sad", false);
+		anim.SetBool ("happy", true);
+
+		pausarStatus = true;
+	}
+
 }

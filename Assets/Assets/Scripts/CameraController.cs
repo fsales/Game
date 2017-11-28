@@ -19,6 +19,6 @@ public class CameraController : MonoBehaviour {
 		Vector3 v = new Vector3 (transform.position.x, 0.0f, transform.position.z);
 		transform.position = v;
 
-		Debug.Log (transform.position.y);
+		//Debug.Log (transform.position.y);
 	}
 }
