@@ -11,9 +11,7 @@ public class PlayerController : MonoBehaviour {
 	float maxEscalaJumping = 2f;
 	bool  cair = false;
 
-
 	bool debugStates = true;
-
 
 	// Use this for initialization
 	void Start () {
@@ -29,39 +27,35 @@ public class PlayerController : MonoBehaviour {
 			playerStateStopped ();
 		}
 
+		// Esquerda
+		if (Input.GetKey (KeyCode.LeftArrow)) {
+			Vector3 scala = transform.localScale;
+			scala.x = -1;
+			transform.localScale = scala;
 
-			
-			// Esquerda
-			if (Input.GetKey (KeyCode.LeftArrow)) {
-				Vector3 scala = transform.localScale;
-				scala.x = -1;
-				transform.localScale = scala;
+			Vector3 pos = transform.position;
+			pos.x -= escalaRunning;
 
-				Vector3 pos = transform.position;
-				pos.x -= escalaRunning;
+			transform.position = pos;
 
-				transform.position = pos;
+			playerStateRunning ();
 
-				playerStateRunning ();
+		}
 
-			}
+		// Direita
+		if (Input.GetKey (KeyCode.RightArrow)) {
+			Vector3 scala = transform.localScale;
+			scala.x = 1;
+			transform.localScale = scala;
 
-			// Direita
-			if (Input.GetKey (KeyCode.RightArrow)) {
-				Vector3 scala = transform.localScale;
-				scala.x = 1;
-				transform.localScale = scala;
+			Vector3 pos = transform.position;
+			pos.x += escalaRunning;
 
-				Vector3 pos = transform.position;
-				pos.x += escalaRunning;
+			transform.position = pos;
 
-				transform.position = pos;
+			playerStateRunning ();
 
-				playerStateRunning ();
-
-			}
-		
-
+		}
 
 		// Pulando
 		if (Input.GetKey(KeyCode.Space)){
@@ -83,8 +77,6 @@ public class PlayerController : MonoBehaviour {
 			}
 		}
 
-
-
 		if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow)){
 			playerStateStopped ();
 		}
@@ -95,16 +87,6 @@ public class PlayerController : MonoBehaviour {
 		}
 
 
-	}
-
-
-
-	void OnCollisionEnter(Collision col){
-		if (col != null) {
-			Debug.Log (col.gameObject.tag);
-		} else {
-			Debug.Log ("vazioooo");
-		}
 	}
 
 	bool playerCanJump(){
@@ -175,5 +157,10 @@ public class PlayerController : MonoBehaviour {
 			anim.SetBool("running", false);
 			anim.SetBool("jumping", true);
 		}
+	}
+
+	void OnTriggerEnter2D(Collider2D other) {
+		Debug.LogWarning("COLISAO FINAL FASE");
+		anim.SetBool ("happy", true);
 	}
 }
