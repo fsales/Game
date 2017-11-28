@@ -282,7 +282,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &543564205
 GameObject:
@@ -344,7 +344,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &611118275
 GameObject:
@@ -558,7 +558,7 @@ RectTransform:
   - {fileID: 611118276}
   - {fileID: 2081333156}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -577,54 +577,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scenaNewGame: Scene1 - Bruno
---- !u!1 &1583581884
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1583581886}
-  - component: {fileID: 1583581885}
-  m_Layer: 0
-  m_Name: GameSceneController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1583581885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1583581884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60cfcbd326e416b47ac524c5a6fef050, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objs:
-  - {fileID: 1224290766842028, guid: b878dc1a024b1af45bdf56c0f081a643, type: 2}
-  - {fileID: 1104492364249632, guid: 60146296461b97640bfad1c1c531ed4c, type: 2}
-  - {fileID: 1143858656848902, guid: 8c2c864232e48ac48a72d04ef4953537, type: 2}
-  - {fileID: 1950474705653440, guid: 6ef24ffabc9141d4383093c49edeecf1, type: 2}
-  - {fileID: 1153816477651062, guid: bed462295f3e216479d991e22b2c433d, type: 2}
-  frequency: 1
-  objetoRelativo: {fileID: 0}
---- !u!4 &1583581886
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1583581884}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.3231035, y: -2.9686587, z: -0.33495083}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1682880518
 GameObject:
   m_ObjectHideFlags: 0
