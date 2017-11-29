@@ -1,6 +1,7 @@
 Library/
 Temp/
 UnityPackageManager/
+obj/
 
 **/*.csproj
 **/*.unityproj
