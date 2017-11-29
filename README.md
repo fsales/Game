@@ -5,7 +5,7 @@ Pós-Gradução Desenvolvimento para Dispositivos Móveis
 2017a
 ## Disciplina
 Desenvolvimento de Jogos para Dispositivos Móveis
-## Trabalho final da disciplina
+## Conteúdo
 - Prefabs
 - Scripts CSharp
 - Animations
