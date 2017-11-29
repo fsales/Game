@@ -56,10 +56,9 @@ GameObject:
   - component: {fileID: 222023987244202304}
   - component: {fileID: 114483294901303000}
   - component: {fileID: 114690438453165490}
-  - component: {fileID: 114106501586516224}
   m_Layer: 5
   m_Name: Botao_Retry
-  m_TagString: Untagged
+  m_TagString: tag-retry
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,6 +125,7 @@ GameObject:
   - component: {fileID: 223169073367015992}
   - component: {fileID: 114760405865466424}
   - component: {fileID: 114718550568708388}
+  - component: {fileID: 114170815434379632}
   m_Layer: 5
   m_Name: Canvas_Retry
   m_TagString: tag-retry
@@ -196,8 +196,9 @@ MonoBehaviour:
   titulo: {fileID: 114611733953018336}
   time: {fileID: 114098163392989846}
   resumo: {fileID: 114802057689129718}
-  numeroFase: 1
+  numeroFase: 2
   menuRetry: {fileID: 223169073367015992}
+  PASSOU: 0
 --- !u!114 &114098163392989846
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -231,18 +232,17 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 00:00:00
---- !u!114 &114106501586516224
+--- !u!114 &114170815434379632
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1145931571395302}
+  m_GameObject: {fileID: 1854706661991736}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8aaebd3752408cb46b91bb3fa1d1e7d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  botaoRetry: {fileID: 114690438453165490}
 --- !u!114 &114462899937834232
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -368,7 +368,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114483294901303000}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114170815434379632}
+        m_MethodName: jogarNovamente
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114718550568708388
@@ -468,10 +479,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -479,7 +490,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Tentar Novamente
+  m_Text: Jogar Novamente
 --- !u!114 &114872780380235154
 MonoBehaviour:
   m_ObjectHideFlags: 1

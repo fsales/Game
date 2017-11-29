@@ -194,6 +194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cockpitController: {fileID: 0}
+  collider2d: {fileID: 70952708355276600}
 --- !u!124 &124672695163556988
 Behaviour:
   m_ObjectHideFlags: 1

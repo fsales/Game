@@ -21,8 +21,9 @@ public class CockpitController : MonoBehaviour {
 	public bool PASSOU = false;
 
 	public static int FASE1_SCENE = 1; //"Scene1 - Bruno";
-	public static int FASE2_SCENE = 2; //"Scene1 - Rafael";
-	public static int FASE3_SCENE = 3; //"Scene1 - Fabio";
+	public static int FASE2_SCENE = 2; //"Scene2 - Rafael";
+	public static int FASE3_SCENE = 3; //"Scene3 - Fabio";
+	public static int FASE4_SCENE = 4; //"Scene4 - Final";
 
 
 	// Use this for initialization
@@ -39,12 +40,12 @@ public class CockpitController : MonoBehaviour {
 
 		Dictionary<string, object> fase3 = new Dictionary<string, object> ();
 		fase3.Add ("titulo", "Fase 3"); 
-		fase3.Add ("timeLimite", 40f); // Segundos
+		fase3.Add ("timeLimite", 30f); // Segundos
 		fase3.Add ("timeUsuario", null);
 
 		Dictionary<string, object> fase4 = new Dictionary<string, object> ();
 		fase4.Add ("titulo", "Fase 4"); 
-		fase4.Add ("timeLimite", 50f); // Segundos
+		fase4.Add ("timeLimite", 30f); // Segundos
 		fase4.Add ("timeUsuario", null);
 
 		main = new Dictionary<string, Dictionary<string, object>>();
@@ -136,7 +137,9 @@ public class CockpitController : MonoBehaviour {
 			Application.LoadLevel (FASE2_SCENE);
 		} else if (fase == 3) {
 			Application.LoadLevel(FASE3_SCENE);
-		} else {
+		} else if (fase == 4) {
+			Application.LoadLevel(FASE4_SCENE);
+		}  else {
 			Application.LoadLevel(FASE1_SCENE);
 		}
 

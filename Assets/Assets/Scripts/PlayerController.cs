@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour {
 	float maxEscalaJumping = 2f;
 	bool  cair = false;
 	public CockpitController cockpitController;
+	public CapsuleCollider2D collider2d;
+
 
 	bool debugStates = false;
 	bool pausarStatus = false;
@@ -113,7 +115,20 @@ public class PlayerController : MonoBehaviour {
 
 				// Animação FELIZ
 				playerStateHappy();
+
+
+
+				// Posicionamento para cima (o player esta saindo do collider)
+
+				Vector2 capsule = new Vector2 (1.96f, 6f);
+				collider2d.size = capsule;
+
+
+
 				Invoke("trocarFase", 5.0f);
+
+
+
 
 				// AGuardar um tempo determinado e trocar de fase
 
