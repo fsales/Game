@@ -422,7 +422,7 @@ Prefab:
         type: 2}
       propertyPath: cockpitController
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1626744733}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b004a76a0fd5df545b2f249c22df8e7e, type: 2}
   m_IsPrefabParent: 0
@@ -1307,22 +1307,22 @@ Prefab:
     - target: {fileID: 224885423359922302, guid: d49c737b43f76ac40928ebcdebeeff71,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 419.7775
+      value: 671.7775
       objectReference: {fileID: 0}
     - target: {fileID: 224885423359922302, guid: d49c737b43f76ac40928ebcdebeeff71,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 93.325874
+      value: 233.32588
       objectReference: {fileID: 0}
     - target: {fileID: 224606482157382174, guid: d49c737b43f76ac40928ebcdebeeff71,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 419.7775
+      value: 671.7775
       objectReference: {fileID: 0}
     - target: {fileID: 224606482157382174, guid: d49c737b43f76ac40928ebcdebeeff71,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 93.325874
+      value: 233.32588
       objectReference: {fileID: 0}
     - target: {fileID: 114047614555782924, guid: d49c737b43f76ac40928ebcdebeeff71,
         type: 2}
@@ -1332,6 +1332,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d49c737b43f76ac40928ebcdebeeff71, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1626744733 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114047614555782924, guid: d49c737b43f76ac40928ebcdebeeff71,
+    type: 2}
+  m_PrefabInternal: {fileID: 1626744732}
+  m_Script: {fileID: 11500000, guid: 4ce6f4e895c2a7a4996dc53dd9f468b2, type: 3}
 --- !u!1001 &1655975549
 Prefab:
   m_ObjectHideFlags: 0
