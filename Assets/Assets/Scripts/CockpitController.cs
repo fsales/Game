@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CockpitController : MonoBehaviour {
 
@@ -20,10 +21,10 @@ public class CockpitController : MonoBehaviour {
 	public static bool FINALIZOU = false;
 	public bool PASSOU = false;
 
-	public static int FASE1_SCENE = 1; //"Scene1 - Bruno";
-	public static int FASE2_SCENE = 2; //"Scene2 - Rafael";
-	public static int FASE3_SCENE = 3; //"Scene3 - Fabio";
-	public static int FASE4_SCENE = 4; //"Scene4 - Final";
+	public static string FASE1_SCENE = "Scene1 - Bruno";
+	public static string FASE2_SCENE = "Scene2 - Rafael";
+	public static string FASE3_SCENE = "Scene3 - Fabio";
+	public static string FASE4_SCENE = "Scene4 - Final";
 
 
 	// Use this for initialization
@@ -134,13 +135,13 @@ public class CockpitController : MonoBehaviour {
 		int fase = numeroFase + 1;
 
 		if (fase == 2) {
-			Application.LoadLevel (FASE2_SCENE);
+			SceneManager.LoadScene(sceneName: FASE2_SCENE);
 		} else if (fase == 3) {
-			Application.LoadLevel(FASE3_SCENE);
+			SceneManager.LoadScene(sceneName: FASE3_SCENE);
 		} else if (fase == 4) {
-			Application.LoadLevel(FASE4_SCENE);
+			SceneManager.LoadScene(sceneName: FASE4_SCENE);
 		}  else {
-			Application.LoadLevel(FASE1_SCENE);
+			SceneManager.LoadScene(sceneName: FASE1_SCENE);
 		}
 
 	}

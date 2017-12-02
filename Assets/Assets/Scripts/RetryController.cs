@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class RetryController : MonoBehaviour {
 
@@ -12,7 +13,7 @@ public class RetryController : MonoBehaviour {
 
 	public void jogarNovamente(){
 		Debug.Log ("voltar");
-		Application.LoadLevel(CockpitController.FASE1_SCENE);
+		SceneManager.LoadScene(CockpitController.FASE1_SCENE);
 	}
 		
 }
