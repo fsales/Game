@@ -35,7 +35,11 @@ public class PlayerController : MonoBehaviour {
 			playerStateStopped ();
 		}
 
+		if (CockpitController.FINALIZOU) {
+			Debug.Log ("Finalizou jogo");
 
+			playerStateSad ();
+		} else {
 			
 			// Esquerda
 			if (Input.GetKey (KeyCode.LeftArrow)) {
@@ -66,44 +70,37 @@ public class PlayerController : MonoBehaviour {
 				playerStateRunning ();
 
 			}
-		
 
+			// Pulando
+			if (Input.GetKey (KeyCode.Space)) {
 
-		// Pulando
-		if (Input.GetKey(KeyCode.Space)){
+				if ((playerCanJump () || playerJumping ()) && !cair) {
 
-			if ( (playerCanJump() || playerJumping()) && !cair) {
+					Vector3 pos = transform.position;
 
-				Vector3 pos = transform.position;
+					//Debug.Log (pos.y);
 
-				//Debug.Log (pos.y);
+					if (pos.y <= maxEscalaJumping) {
+						pos.y += escalaJumping;
+						transform.position = pos;
 
-				if (pos.y <= maxEscalaJumping) {
-					pos.y += escalaJumping;
-					transform.position = pos;
-
-					playerStateJumping ();
-				} else {
-					cair = true;
+						playerStateJumping ();
+					} else {
+						cair = true;
+					}
 				}
 			}
+
+			if (Input.GetKeyUp (KeyCode.LeftArrow) || Input.GetKeyUp (KeyCode.RightArrow)) {
+				playerStateStopped ();
+			}
+
+			// Soltar a barra de espaco
+			if (Input.GetKeyUp (KeyCode.Space)) {
+				cair = true;
+			}
 		}
-
-
-
-		if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow)){
-			playerStateStopped ();
-		}
-
-		// Soltar a barra de espaco
-		if (Input.GetKeyUp (KeyCode.Space)) {
-			cair = true;
-		}
-
-
 	}
-
-
 
 	void OnCollisionEnter2D(Collision2D other){
 
@@ -114,7 +111,7 @@ public class PlayerController : MonoBehaviour {
 				cockpitController.registrarFimFase ();
 
 				// Animação FELIZ
-				playerStateHappy();
+				playerStateHappy ();
 
 
 
@@ -125,7 +122,7 @@ public class PlayerController : MonoBehaviour {
 
 
 
-				Invoke("trocarFase", 5.0f);
+				Invoke ("trocarFase", 5.0f);
 
 
 
@@ -216,14 +213,14 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
-	void playerStateSad(){
-		anim.SetBool("stopped", false);
+	public void playerStateSad(){
+		anim.SetBool ("sad", true);
+		anim.SetBool("stopped", true);
 		anim.SetBool("running", false);
 		anim.SetBool("jumping", false);
-		anim.SetBool ("sad", true);
 		anim.SetBool ("happy", false);
 
-		pausarStatus = true;
+//		pausarStatus = true;
 	}
 
 	void playerStateHappy(){
