@@ -137,8 +137,6 @@ public class PlayerController : MonoBehaviour {
 		cockpitController.trocarFase ();
 	}
 
-
-
 	bool playerCanJump(){
 		bool andandoOuPulando = anim.GetBool ("stopped") || anim.GetBool ("running");
 
@@ -196,8 +194,6 @@ public class PlayerController : MonoBehaviour {
 
 		cair = false;
 	}
-		
-
 
 	void playerStateJumping(){
 
