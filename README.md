@@ -1,3 +1,10 @@
+
+## Alunos
+Matr: 1731088010 - Bruno Portela de Moura
+Matr: 1731088030 - Fabio de Oliveira Sales
+Matr: 1731088025 - Rafael Pivetta Balbuena
+
+
 # Game
 ## Curso
 Pós-Gradução Desenvolvimento para Dispositivos Móveis
@@ -11,7 +18,3 @@ Desenvolvimento de Jogos para Dispositivos Móveis
 - Animations
 - State Machines
 - entre outros...
-## Alunos
-- Bruno Portela
-- Fabio Sales
-- Rafael Pivetta Balbuena
