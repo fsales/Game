@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObjectController : MonoBehaviour {
 
 	 
-	public int forca = 0;
+	public int forca = 10;
 	public string sentidoForca = "U";
 
 	// Use this for initialization

@@ -188,7 +188,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b60c0dc6a3d34470b397557e63bd49e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forca: 0
+  forca: 10
+  sentidoForca: R
 --- !u!114 &114138856657468084
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -213,6 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forca: 10
+  sentidoForca: L
 --- !u!114 &114252765972948998
 MonoBehaviour:
   m_ObjectHideFlags: 1
