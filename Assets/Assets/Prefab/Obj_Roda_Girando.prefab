@@ -118,7 +118,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 6
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -138,7 +138,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 6
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b60c0dc6a3d34470b397557e63bd49e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forca: 10
+  forca: 40
   sentidoForca: R
 --- !u!114 &114138856657468084
 MonoBehaviour:
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2db5a4e7a1b6048af8d400d97f3408e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotacaoHoraria: 0
+  rotacaoHoraria: 1
 --- !u!114 &114222193238596468
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -213,7 +213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b60c0dc6a3d34470b397557e63bd49e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forca: 10
+  forca: 40
   sentidoForca: L
 --- !u!114 &114252765972948998
 MonoBehaviour:
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2db5a4e7a1b6048af8d400d97f3408e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotacaoHoraria: 0
+  rotacaoHoraria: 1
 --- !u!212 &212601964463612232
 SpriteRenderer:
   m_ObjectHideFlags: 1

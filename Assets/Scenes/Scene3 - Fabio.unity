@@ -855,8 +855,9 @@ MonoBehaviour:
   - {fileID: 1143858656848902, guid: 8c2c864232e48ac48a72d04ef4953537, type: 2}
   - {fileID: 1651943785538446, guid: 9bca6524398d9e041864c38ded37fe02, type: 2}
   - {fileID: 1153816477651062, guid: bed462295f3e216479d991e22b2c433d, type: 2}
-  frequency: 1.2
+  frequency: 0.7
   objetoRelativo: {fileID: 496589803}
+  espacamentoEntreObjetos: 4
 --- !u!4 &908942001
 Transform:
   m_ObjectHideFlags: 0
@@ -1307,22 +1308,22 @@ Prefab:
     - target: {fileID: 224885423359922302, guid: d49c737b43f76ac40928ebcdebeeff71,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 473.2775
+      value: 418.7775
       objectReference: {fileID: 0}
     - target: {fileID: 224885423359922302, guid: d49c737b43f76ac40928ebcdebeeff71,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 319.82587
+      value: 93.325874
       objectReference: {fileID: 0}
     - target: {fileID: 224606482157382174, guid: d49c737b43f76ac40928ebcdebeeff71,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 473.2775
+      value: 418.7775
       objectReference: {fileID: 0}
     - target: {fileID: 224606482157382174, guid: d49c737b43f76ac40928ebcdebeeff71,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 319.82587
+      value: 93.325874
       objectReference: {fileID: 0}
     - target: {fileID: 114047614555782924, guid: d49c737b43f76ac40928ebcdebeeff71,
         type: 2}
