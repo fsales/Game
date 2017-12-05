@@ -71,6 +71,9 @@ public class PlayerController : MonoBehaviour {
 
 			}
 
+			if (Input.GetKey (KeyCode.H)) {
+			}
+
 			// Pulando
 			if (Input.GetKey (KeyCode.Space)) {
 
@@ -130,7 +133,15 @@ public class PlayerController : MonoBehaviour {
 				// AGuardar um tempo determinado e trocar de fase
 
 			}
-		}
+			else {
+				//if (other.gameObject.tag != "chao") {
+				//	Vector2 x = Vector2.left * 50;
+				//	GetComponent<Rigidbody2D> ().AddForce(x, ForceMode2D.Impulse);
+				//	Debug.Log ("IMPULSO");
+				//}
+				//Time.timeScale -= 0.1f;
+			}
+		} 
 	}
 
 	public void trocarFase(){

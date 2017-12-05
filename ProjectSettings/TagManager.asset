@@ -8,6 +8,7 @@ TagManager:
   - tag-retry
   - tag-titulo
   - Start
+  - chao
   layers:
   - Default
   - TransparentFX

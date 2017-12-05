@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212772579546573686}
   - component: {fileID: 70276823808781276}
   - component: {fileID: 114252765972948998}
+  - component: {fileID: 114222193238596468}
   - component: {fileID: 50815288626197068}
   m_Layer: 0
   m_Name: Roda (5)
@@ -41,6 +42,7 @@ GameObject:
   - component: {fileID: 212601964463612232}
   - component: {fileID: 70563944076657796}
   - component: {fileID: 114138856657468084}
+  - component: {fileID: 114099174048130526}
   - component: {fileID: 50985719244623160}
   m_Layer: 0
   m_Name: Roda (6)
@@ -175,6 +177,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 3, y: 2.97}
   m_Direction: 0
+--- !u!114 &114099174048130526
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1369662343620684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b60c0dc6a3d34470b397557e63bd49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forca: 0
 --- !u!114 &114138856657468084
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -187,6 +201,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotacaoHoraria: 0
+--- !u!114 &114222193238596468
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1297827432550694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b60c0dc6a3d34470b397557e63bd49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forca: 10
 --- !u!114 &114252765972948998
 MonoBehaviour:
   m_ObjectHideFlags: 1

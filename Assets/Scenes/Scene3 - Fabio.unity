@@ -569,7 +569,7 @@ GameObject:
   - component: {fileID: 695386869}
   m_Layer: 0
   m_Name: Fundo5
-  m_TagString: Untagged
+  m_TagString: chao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -673,7 +673,7 @@ GameObject:
   - component: {fileID: 745791431}
   m_Layer: 0
   m_Name: Fundo3
-  m_TagString: Untagged
+  m_TagString: chao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -883,7 +883,7 @@ GameObject:
   - component: {fileID: 1101337050}
   m_Layer: 0
   m_Name: Fundo1
-  m_TagString: Untagged
+  m_TagString: chao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1115,7 +1115,7 @@ GameObject:
   - component: {fileID: 1556802071}
   m_Layer: 0
   m_Name: Fundo4
-  m_TagString: Untagged
+  m_TagString: chao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1307,22 +1307,22 @@ Prefab:
     - target: {fileID: 224885423359922302, guid: d49c737b43f76ac40928ebcdebeeff71,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 419.77747
+      value: 473.2775
       objectReference: {fileID: 0}
     - target: {fileID: 224885423359922302, guid: d49c737b43f76ac40928ebcdebeeff71,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 93.32587
+      value: 319.82587
       objectReference: {fileID: 0}
     - target: {fileID: 224606482157382174, guid: d49c737b43f76ac40928ebcdebeeff71,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 419.77747
+      value: 473.2775
       objectReference: {fileID: 0}
     - target: {fileID: 224606482157382174, guid: d49c737b43f76ac40928ebcdebeeff71,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 93.32587
+      value: 319.82587
       objectReference: {fileID: 0}
     - target: {fileID: 114047614555782924, guid: d49c737b43f76ac40928ebcdebeeff71,
         type: 2}
@@ -1390,7 +1390,7 @@ GameObject:
   - component: {fileID: 1894782767}
   m_Layer: 0
   m_Name: Background
-  m_TagString: Untagged
+  m_TagString: chao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1431,7 +1431,7 @@ GameObject:
   - component: {fileID: 1936991570}
   m_Layer: 0
   m_Name: Fundo6
-  m_TagString: Untagged
+  m_TagString: chao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1635,7 +1635,7 @@ GameObject:
   - component: {fileID: 2122260928}
   m_Layer: 0
   m_Name: Fundo2
-  m_TagString: Untagged
+  m_TagString: chao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

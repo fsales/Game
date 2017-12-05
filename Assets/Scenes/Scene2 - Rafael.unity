@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 80062960}
   - component: {fileID: 80062959}
   - component: {fileID: 80062958}
+  - component: {fileID: 80062962}
   m_Layer: 0
   m_Name: Roda (0)
   m_TagString: Untagged
@@ -141,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2db5a4e7a1b6048af8d400d97f3408e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotacaoHoraria: 0
+  rotacaoHoraria: 1
 --- !u!70 &80062959
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -214,6 +215,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &80062962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 80062957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b60c0dc6a3d34470b397557e63bd49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forca: 40
+  sentidoForca: L
 --- !u!1 &275438994
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,7 +240,7 @@ GameObject:
   - component: {fileID: 275438996}
   m_Layer: 0
   m_Name: Fundo6
-  m_TagString: Untagged
+  m_TagString: chao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -427,7 +441,7 @@ GameObject:
   - component: {fileID: 359487448}
   m_Layer: 0
   m_Name: Fundo5
-  m_TagString: Untagged
+  m_TagString: chao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -891,6 +905,7 @@ GameObject:
   - component: {fileID: 504224186}
   - component: {fileID: 504224185}
   - component: {fileID: 504224184}
+  - component: {fileID: 504224188}
   m_Layer: 0
   m_Name: Roda (8)
   m_TagString: Untagged
@@ -982,6 +997,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &504224188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 504224183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b60c0dc6a3d34470b397557e63bd49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forca: 40
+  sentidoForca: R
 --- !u!1 &778269167
 GameObject:
   m_ObjectHideFlags: 0
@@ -1067,7 +1095,7 @@ GameObject:
   - component: {fileID: 864547291}
   m_Layer: 0
   m_Name: Fundo2
-  m_TagString: Untagged
+  m_TagString: chao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1345,7 +1373,7 @@ GameObject:
   - component: {fileID: 1277940634}
   m_Layer: 0
   m_Name: Fundo1
-  m_TagString: Untagged
+  m_TagString: chao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1459,7 +1487,7 @@ GameObject:
   - component: {fileID: 1473940576}
   m_Layer: 0
   m_Name: Background
-  m_TagString: Untagged
+  m_TagString: chao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1495,7 +1523,7 @@ GameObject:
   - component: {fileID: 1576284899}
   m_Layer: 0
   m_Name: BarreiraInicio
-  m_TagString: Untagged
+  m_TagString: chao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1580,22 +1608,22 @@ Prefab:
     - target: {fileID: 224885423359922302, guid: d49c737b43f76ac40928ebcdebeeff71,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 689.2775
+      value: 473.2775
       objectReference: {fileID: 0}
     - target: {fileID: 224885423359922302, guid: d49c737b43f76ac40928ebcdebeeff71,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 228.82588
+      value: 319.82587
       objectReference: {fileID: 0}
     - target: {fileID: 224606482157382174, guid: d49c737b43f76ac40928ebcdebeeff71,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 689.2775
+      value: 473.2775
       objectReference: {fileID: 0}
     - target: {fileID: 224606482157382174, guid: d49c737b43f76ac40928ebcdebeeff71,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 228.82588
+      value: 319.82587
       objectReference: {fileID: 0}
     - target: {fileID: 114047614555782924, guid: d49c737b43f76ac40928ebcdebeeff71,
         type: 2}
@@ -1876,7 +1904,7 @@ GameObject:
   - component: {fileID: 1967596720}
   m_Layer: 0
   m_Name: Fundo3
-  m_TagString: Untagged
+  m_TagString: chao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2075,6 +2103,7 @@ GameObject:
   - component: {fileID: 1983353277}
   - component: {fileID: 1983353276}
   - component: {fileID: 1983353274}
+  - component: {fileID: 1983353275}
   m_Layer: 0
   m_Name: Roda (1)
   m_TagString: Untagged
@@ -2097,6 +2126,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 3, y: 2.97}
   m_Direction: 0
+--- !u!114 &1983353275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1983353273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b60c0dc6a3d34470b397557e63bd49e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forca: 40
+  sentidoForca: U
 --- !u!212 &1983353276
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2166,7 +2208,7 @@ GameObject:
   - component: {fileID: 1987896908}
   m_Layer: 0
   m_Name: Fundo4
-  m_TagString: Untagged
+  m_TagString: chao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
